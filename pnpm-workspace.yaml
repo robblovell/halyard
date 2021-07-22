@@ -1,0 +1,6 @@
+packages:
+  - 'halyard-backend/**'
+  - 'halyard-sockets/**'
+  # exclude packages that are inside test directories
+  - '!**/coverage/**'
+  - '!**/test/**'

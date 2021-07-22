@@ -1,0 +1,34 @@
+{
+  "name": "halyard",
+  "workspaces": [
+    "halyard-backend",
+    "halyard-sockets"
+  ],
+  "scripts": {
+    "build": "",
+    "package": "",
+    "publish": "",
+    "start-server": "node halyard-backend/server.js",
+    "start-frontend": "node halyard-frontend/server.js",
+    "start-backend": "node halyard-backend/server.js",
+    "start-sockets": "node halyard-sockets/server.js",
+    "test": "jest --config=\"./jest.config.unit.js\"",
+    "unit-tests": "jest --config=\"./jest.config.unit.js\" --maxWorkers=3 --coverage",
+    "functional-tests": "NODE_ENV=test jest --config=\"./jest.config.spec.js\" --forceExit --maxWorkers=1",
+    "integration-tests": "NODE_ENV=test jest --forceExit --maxWorkers=1"
+  },
+  "version": "1.0.0",
+  "description": "Sample halyard project",
+  "repository": "git@github.com:c6o/halyard.git",
+  "author": "narayan & robb",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "javascript-obfuscator": "^1.10.2",
+    "jest": "^26.0.1",
+    "jest-html-reporters": "^2.0.3",
+    "typescript": "^4.3.2"
+  }
+}

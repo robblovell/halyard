@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: halyard-database
+  labels:
+    app: halyard
+    component: database
+spec:
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017
+  selector:
+    app: halyard
+    component: database
